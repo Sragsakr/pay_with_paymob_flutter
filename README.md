@@ -1,6 +1,38 @@
 # pay_with_paymob_flutter
 
-A comprehensive Flutter plugin for integrating [Paymob](https://paymob.com) payment gateway. Supports all Paymob payment methods including Unified Checkout (Intention API), iframe payments, payment links, digital wallets, and installment services.
+<p align="center">
+  <a href="https://pub.dev/packages/pay_with_paymob_flutter">
+    <img src="https://img.shields.io/pub/v/pay_with_paymob_flutter.svg" alt="pub version" />
+  </a>
+  <a href="https://pub.dev/packages/pay_with_paymob_flutter/score">
+    <img src="https://img.shields.io/pub/points/pay_with_paymob_flutter" alt="pub points" />
+  </a>
+  <a href="https://pub.dev/packages/pay_with_paymob_flutter">
+    <img src="https://img.shields.io/pub/likes/pay_with_paymob_flutter" alt="pub likes" />
+  </a>
+  <a href="https://pub.dev/packages/pay_with_paymob_flutter">
+    <img src="https://img.shields.io/pub/popularity/pay_with_paymob_flutter" alt="pub popularity" />
+  </a>
+  <a href="https://github.com/Sragsakr/pay_with_paymob_flutter/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Sragsakr/pay_with_paymob_flutter" alt="license" />
+  </a>
+</p>
+
+<p align="center">
+  A comprehensive Flutter plugin for integrating <a href="https://paymob.com">Paymob</a> payment gateway.<br/>
+  Supports all Paymob payment methods including Unified Checkout (Intention API), iframe payments,<br/>
+  payment links, digital wallets, and installment services.
+</p>
+
+---
+
+## Platform Support
+
+| Android | iOS | Web | macOS | Windows |
+|:-------:|:---:|:---:|:-----:|:-------:|
+| ✅ | ✅ | ✅ | ✅ | ✅ |
+
+---
 
 ## Features
 
@@ -12,7 +44,6 @@ A comprehensive Flutter plugin for integrating [Paymob](https://paymob.com) paym
 - **Other services** — Kiosk, Contact, HALAN, SYMPL
 - **Built-in multi-environment support** — `ConfigManager` + `AppConfig` included in the plugin
 - **RTL/LTR** localization (Arabic & English)
-- Platform support: Android, iOS, Web, macOS, Windows
 
 ---
 
@@ -582,8 +613,12 @@ final display = (response.amountCents ?? 0) / 100.0;
 
 ## Requirements
 
-- Flutter: >=3.0.0
-- Dart: >=3.0.5 <4.0.0
-- Android: minSdkVersion 19
-- iOS: iOS 11+
-# pay_with_paymob_flutter
+| | Minimum |
+|---|---|
+| Flutter | 3.0.0 |
+| Dart | 3.0.5 |
+| Android | minSdkVersion 19 |
+| iOS | iOS 11+ |
+| macOS | macOS 10.14+ |
+| Windows | Windows 10+ |
+| Web | Any modern browser |
