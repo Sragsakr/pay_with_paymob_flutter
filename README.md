@@ -586,3 +586,4 @@ final display = (response.amountCents ?? 0) / 100.0;
 - Dart: >=3.0.5 <4.0.0
 - Android: minSdkVersion 19
 - iOS: iOS 11+
+# pay_with_paymob_flutter
