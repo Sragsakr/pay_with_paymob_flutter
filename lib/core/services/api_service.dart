@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 import '../constants/api_constants.dart';
 import '../exceptions/paymob_exceptions.dart';
@@ -17,29 +18,31 @@ class ApiService implements ApiServiceInterface {
 
   /// Setup Dio interceptors for logging and error handling
   void _setupInterceptors() {
+    if (!kDebugMode) return;
+
     // Request interceptor for logging
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          print('🚀 [REQUEST] ${options.method} ${options.uri}');
-          print('📋 [HEADERS] ${options.headers}');
+          debugPrint('🚀 [REQUEST] ${options.method} ${options.uri}');
+          debugPrint('📋 [HEADERS] ${options.headers}');
           if (options.data != null) {
-            print('📦 [BODY] ${options.data}');
+            debugPrint('📦 [BODY] ${options.data}');
           }
           handler.next(options);
         },
         onResponse: (response, handler) {
-          print(
+          debugPrint(
               '✅ [RESPONSE] ${response.statusCode} ${response.requestOptions.uri}');
-          print('📄 [DATA] ${response.data}');
+          debugPrint('📄 [DATA] ${response.data}');
           handler.next(response);
         },
         onError: (error, handler) {
-          print(
+          debugPrint(
               '❌ [ERROR] ${error.response?.statusCode} ${error.requestOptions.uri}');
-          print('💥 [ERROR MESSAGE] ${error.message}');
+          debugPrint('💥 [ERROR MESSAGE] ${error.message}');
           if (error.response?.data != null) {
-            print('📄 [ERROR DATA] ${error.response?.data}');
+            debugPrint('📄 [ERROR DATA] ${error.response?.data}');
           }
           handler.next(error);
         },
@@ -54,7 +57,7 @@ class ApiService implements ApiServiceInterface {
         requestHeader: true,
         responseHeader: false,
         error: true,
-        logPrint: (obj) => print('📝 [DIO LOG] $obj'),
+        logPrint: (obj) => debugPrint('📝 [DIO LOG] $obj'),
       ),
     );
   }

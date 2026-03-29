@@ -68,6 +68,7 @@
 /// For more information, see the [README](https://github.com/seragsabrysakr/pay_with_paymob_flutter).
 library pay_with_paymob_flutter;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pay_with_paymob_flutter/core/interfaces/api_service_interface.dart';
 
@@ -280,7 +281,9 @@ class PaymobFlutter implements PaymentServiceInterface {
         title: title?.toString(),
       );
 
-      debugPrint('Intention Api URL: ${unifiedCheckoutConfig.checkoutUrl}');
+      if (kDebugMode) {
+        debugPrint('Intention Api URL: ${unifiedCheckoutConfig.checkoutUrl}');
+      }
 
       // Show payment interface
       // if (context.mounted) {

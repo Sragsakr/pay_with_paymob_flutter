@@ -1,6 +1,6 @@
 name: pay_with_paymob_flutter
 description: A comprehensive Flutter plugin for integrating Paymob payment gateway. Supports Unified Checkout (Intention API), iframe payments, payment links, digital wallets, and installment services across Android, iOS, Web, macOS, and Windows.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/Sragsakr/pay_with_paymob_flutter
 repository: https://github.com/Sragsakr/pay_with_paymob_flutter
 issue_tracker: https://github.com/Sragsakr/pay_with_paymob_flutter/issues
